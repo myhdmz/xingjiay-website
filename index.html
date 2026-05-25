@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>星嘉艺印刷 — 专注儿童启蒙书籍印刷</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ====== 导航栏（滚动显示）====== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-star">★</span>
+        <span class="logo-text">星嘉艺</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">关于我们</a></li>
+        <li><a href="#services">产品服务</a></li>
+        <li><a href="#cases">精品案例</a></li>
+        <li><a href="#contact">联系报价</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">获取报价</a>
+      <button class="nav-toggle" id="navToggle" aria-label="菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- 移动端菜单 -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" onclick="closeMobileMenu()">关于我们</a></li>
+      <li><a href="#services" onclick="closeMobileMenu()">产品服务</a></li>
+      <li><a href="#cases" onclick="closeMobileMenu()">精品案例</a></li>
+      <li><a href="#contact" onclick="closeMobileMenu()">联系报价</a></li>
+    </ul>
+  </div>
+
+  <!-- ====== HERO 全屏首屏 ====== -->
+  <section class="hero" id="hero">
+    <!-- 动态彩色背景 -->
+    <div class="hero-bg">
+      <div class="hero-gradient"></div>
+      <div class="hero-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+      </div>
+      <!-- 书本飘落动画 -->
+      <div class="floating-books" id="floatingBooks"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        深圳专业印刷 · 18年匠心
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line line-1">让每一本</span>
+        <span class="title-line line-2">儿童书籍</span>
+        <span class="title-line line-3">绽放色彩</span>
+      </h1>
+      <p class="hero-sub">
+        专注儿童启蒙书籍高品质印刷 · 服务出版社与教育机构<br>
+        色彩精准 · 纸张安全 · 准时交付
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">
+          <span>立即获取报价</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#cases" class="btn-ghost">查看印刷案例</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">500<sup>+</sup></span>
+          <span class="stat-label">合作出版社</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">1800<sup>万</sup></span>
+          <span class="stat-label">累计印刷册数</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">18</span>
+          <span class="stat-label">年行业经验</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 滚动提示 -->
+    <div class="scroll-hint" id="scrollHint">
+      <div class="scroll-text">向下滚动</div>
+      <div class="scroll-arrow">
+        <div class="arrow-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 关于我们 ====== -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-label">关于我们</div>
+      <div class="about-grid">
+        <div class="about-left reveal-left">
+          <div class="about-img-wrap">
+            <div class="about-img-bg"></div>
+            <div class="about-img-card">
+              <div class="img-placeholder about-img">
+                <div class="placeholder-icon">🏭</div>
+                <div class="placeholder-text">星嘉艺印刷工厂</div>
+              </div>
+            </div>
+            <!-- 浮动信息卡 -->
+            <div class="float-card float-card-1">
+              <div class="fc-icon">🎯</div>
+              <div class="fc-info">
+                <div class="fc-num">99.8%</div>
+                <div class="fc-desc">色彩还原准确度</div>
+              </div>
+            </div>
+            <div class="float-card float-card-2">
+              <div class="fc-icon">✅</div>
+              <div class="fc-info">
+                <div class="fc-num">ISO 9001</div>
+                <div class="fc-desc">质量管理认证</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-right reveal-right">
+          <h2 class="section-title">专注儿童书籍<br><span class="highlight-text">18年匠心印刷</span></h2>
+          <p class="about-desc">
+            星嘉艺印刷创立于2006年，坐落于深圳。我们专注于儿童启蒙类书籍的高品质印刷，
+            凭借精湛的印刷工艺和严格的质量管控，赢得了500余家出版社和教育机构的长期信任。
+          </p>
+          <p class="about-desc">
+            我们深知每一本儿童读物的重要性——鲜艳的色彩激发孩子的阅读兴趣，
+            安全的油墨和纸张守护孩子健康。这是我们对每一份订单的承诺。
+          </p>
+          <div class="about-tags">
+            <span class="tag tag-orange">儿童安全墨水</span>
+            <span class="tag tag-green">环保纸张</span>
+            <span class="tag tag-blue">精准四色印刷</span>
+            <span class="tag tag-purple">书籍装订</span>
+            <span class="tag tag-pink">特种工艺</span>
+          </div>
+          <div class="cert-row">
+            <div class="cert-item">
+              <div class="cert-icon">🏆</div>
+              <span>国家印刷资质</span>
+            </div>
+            <div class="cert-item">
+              <div class="cert-icon">🔬</div>
+              <span>儿童安全检测</span>
+            </div>
+            <div class="cert-item">
+              <div class="cert-icon">🌱</div>
+              <span>绿色印刷认证</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 产品服务 ====== -->
+  <section class="section services-section" id="services">
+    <div class="container">
+      <div class="section-label">产品服务</div>
+      <h2 class="section-title center-title">我们能为您<span class="highlight-text">做什么</span></h2>
+      <p class="section-desc">从绘本到教材，从精装到平装，我们提供全流程印刷解决方案</p>
+      <div class="services-grid">
+        <div class="service-card reveal-up" style="--i:0">
+          <div class="service-icon" style="--color:#FF6B6B">📚</div>
+          <h3>绘本 · 启蒙读物</h3>
+          <p>专业处理大面积色块和精细插图，色彩饱和度高，CMYK精准还原画师原作。适合0-6岁儿童绘本。</p>
+          <ul class="service-features">
+            <li>覆膜亮光/哑光可选</li>
+            <li>圆角安全处理</li>
+            <li>儿童无毒油墨</li>
+          </ul>
+          <div class="service-tag" style="--tc:#FF6B6B">热门服务</div>
+        </div>
+        <div class="service-card reveal-up" style="--i:1">
+          <div class="service-icon" style="--color:#4ECDC4">📖</div>
+          <h3>教材 · 练习册</h3>
+          <p>大批量教材印刷，纸张白度高，文字清晰度强。严格管控交期，确保开学季准时到位。</p>
+          <ul class="service-features">
+            <li>双胶纸/铜版纸可选</li>
+            <li>大批量快速交付</li>
+            <li>精准装订无偏差</li>
+          </ul>
+          <div class="service-tag" style="--tc:#4ECDC4">快速交付</div>
+        </div>
+        <div class="service-card reveal-up" style="--i:2">
+          <div class="service-icon" style="--color:#FFE66D">🎁</div>
+          <h3>精装书 · 礼盒套装</h3>
+          <p>精装硬壳书板材坚挺，覆膜亮丽，烫金工艺提升档次。儿童礼品书、节日套装首选。</p>
+          <ul class="service-features">
+            <li>烫金/烫银/起鼓</li>
+            <li>精装圆脊/平脊</li>
+            <li>礼盒配套定制</li>
+          </ul>
+          <div class="service-tag" style="--tc:#FFE66D">高端定制</div>
+        </div>
+        <div class="service-card reveal-up" style="--i:3">
+          <div class="service-icon" style="--color:#A8E6CF">🌈</div>
+          <h3>特种工艺书籍</h3>
+          <p>局部UV光油、荧光色印刷、触感膜等特种工艺，让书籍触感丰富，激发儿童翻阅兴趣。</p>
+          <ul class="service-features">
+            <li>局部UV / 全版UV</li>
+            <li>磨砂触感膜</li>
+            <li>荧光专色印刷</li>
+          </ul>
+          <div class="service-tag" style="--tc:#A8E6CF">增值工艺</div>
+        </div>
+        <div class="service-card reveal-up" style="--i:4">
+          <div class="service-icon" style="--color:#C7B3E5">📦</div>
+          <h3>配套包装</h3>
+          <p>书箱、腰封、书签、卡片等配套印刷，一站式满足出版社从图书到配件的全套需求。</p>
+          <ul class="service-features">
+            <li>腰封 / 书签 / 卡片</li>
+            <li>书箱纸盒包装</li>
+            <li>一站式配套服务</li>
+          </ul>
+          <div class="service-tag" style="--tc:#C7B3E5">配套服务</div>
+        </div>
+        <div class="service-card service-card-cta reveal-up" style="--i:5">
+          <div class="cta-card-inner">
+            <div class="cta-card-icon">💬</div>
+            <h3>不确定需要什么？</h3>
+            <p>告诉我们您的印刷需求，我们为您量身推荐最合适的方案和工艺</p>
+            <a href="#contact" class="btn-primary btn-small">免费咨询</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 精品案例 ====== -->
+  <section class="section cases-section" id="cases">
+    <div class="container">
+      <div class="section-label">精品案例</div>
+      <h2 class="section-title center-title">用作品说话，<span class="highlight-text">品质看得见</span></h2>
+      <p class="section-desc">部分合作出版项目展示</p>
+
+      <div class="cases-grid">
+        <div class="case-card case-large reveal-up" style="--i:0">
+          <div class="case-img" style="--bg:#FFD93D">
+            <div class="case-img-inner">
+              <div class="case-icon">📚</div>
+              <div class="case-overlay-text">精品绘本系列</div>
+            </div>
+          </div>
+          <div class="case-info">
+            <span class="case-tag">绘本</span>
+            <h4>《小小探险家》系列绘本</h4>
+            <p>全套12册精装绘本，四色精印+局部UV工艺，合作某知名出版社，印量5万册，色彩还原度高达99.5%</p>
+          </div>
+        </div>
+        <div class="case-card reveal-up" style="--i:1">
+          <div class="case-img" style="--bg:#6BCB77">
+            <div class="case-img-inner">
+              <div class="case-icon">📖</div>
+              <div class="case-overlay-text">幼儿教材</div>
+            </div>
+          </div>
+          <div class="case-info">
+            <span class="case-tag">教材</span>
+            <h4>幼儿园教材配套练习册</h4>
+            <p>某教育集团旗下300所园所统一使用，年印量80万册，准时完成率100%</p>
+          </div>
+        </div>
+        <div class="case-card reveal-up" style="--i:2">
+          <div class="case-img" style="--bg:#4D96FF">
+            <div class="case-img-inner">
+              <div class="case-icon">🎁</div>
+              <div class="case-overlay-text">礼品套装</div>
+            </div>
+          </div>
+          <div class="case-info">
+            <span class="case-tag">精装礼盒</span>
+            <h4>儿童节礼品书礼盒套装</h4>
+            <p>包含精装书+卡牌+书签的组合礼盒，烫金工艺，入选商场畅销礼品榜前三</p>
+          </div>
+        </div>
+        <div class="case-card reveal-up" style="--i:3">
+          <div class="case-img" style="--bg:#FF6B9D">
+            <div class="case-img-inner">
+              <div class="case-icon">🌟</div>
+              <div class="case-overlay-text">荧光特种</div>
+            </div>
+          </div>
+          <div class="case-info">
+            <span class="case-tag">特种工艺</span>
+            <h4>荧光色系科普童书</h4>
+            <p>使用荧光专色印刷，在普通光线与荧光灯下呈现双重效果，获得儿童读者热烈好评</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 客户评价 -->
+      <div class="testimonials">
+        <h3 class="testimonials-title">客户怎么说</h3>
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal-up" style="--i:0">
+            <div class="stars">★★★★★</div>
+            <p>"合作了5年，每次交货都准时，印刷质量稳定，价格也合理。出版社的老供应商非他们莫属。"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="--ac:#FF6B6B">李</div>
+              <div>
+                <div class="author-name">李编辑</div>
+                <div class="author-title">某知名少儿出版社 采购总监</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card reveal-up" style="--i:1">
+            <div class="stars">★★★★★</div>
+            <p>"第一次合作就交付了30万册的教材，质量完全满足要求，颜色还原准确，纸张质感也很好。"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="--ac:#4ECDC4">王</div>
+              <div>
+                <div class="author-name">王总</div>
+                <div class="author-title">某教育科技公司 COO</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card reveal-up" style="--i:2">
+            <div class="stars">★★★★★</div>
+            <p>"专业团队，从打样到大货全程沟通顺畅，遇到工艺难点能主动提出解决方案，值得长期合作。"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="--ac:#A8E6CF">张</div>
+              <div>
+                <div class="author-name">张设计总监</div>
+                <div class="author-title">绘本品牌 设计总监</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 联系我们 ====== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-label light-label">联系报价</div>
+      <h2 class="section-title center-title white-title">开始您的<span class="highlight-text">印刷项目</span></h2>
+      <p class="section-desc white-desc">填写需求，我们将在24小时内给您专业报价</p>
+
+      <div class="contact-grid">
+        <div class="contact-form-wrap reveal-left">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label>您的称呼 *</label>
+                <input type="text" placeholder="请输入姓名" required>
+              </div>
+              <div class="form-group">
+                <label>联系电话 *</label>
+                <input type="tel" placeholder="请输入手机号" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>所在公司 / 机构</label>
+              <input type="text" placeholder="出版社 / 教育机构 / 其他">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>印刷类型 *</label>
+                <select required>
+                  <option value="">请选择...</option>
+                  <option>儿童绘本</option>
+                  <option>教材 / 练习册</option>
+                  <option>精装书籍</option>
+                  <option>礼品套装</option>
+                  <option>特种工艺书籍</option>
+                  <option>其他</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>印刷数量</label>
+                <select>
+                  <option value="">请选择...</option>
+                  <option>1000册以下</option>
+                  <option>1000 - 5000册</option>
+                  <option>5000 - 30000册</option>
+                  <option>30000册以上</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>项目需求说明</label>
+              <textarea placeholder="请描述您的印刷需求，如：书籍规格、页数、纸张要求、特殊工艺等..." rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-full">
+              <span>提交需求，获取报价</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </form>
+        </div>
+
+        <div class="contact-info-wrap reveal-right">
+          <div class="contact-info-card">
+            <h3>直接联系我们</h3>
+            <div class="contact-info-items">
+              <div class="ci-item">
+                <div class="ci-icon">📞</div>
+                <div class="ci-content">
+                  <div class="ci-label">联系电话</div>
+                  <div class="ci-value">0755-XXXX-XXXX</div>
+                </div>
+              </div>
+              <div class="ci-item">
+                <div class="ci-icon">💬</div>
+                <div class="ci-content">
+                  <div class="ci-label">微信 / 企业微信</div>
+                  <div class="ci-value">xingjiayi2006</div>
+                </div>
+              </div>
+              <div class="ci-item">
+                <div class="ci-icon">📧</div>
+                <div class="ci-content">
+                  <div class="ci-label">电子邮箱</div>
+                  <div class="ci-value">print@xingjiayi.com</div>
+                </div>
+              </div>
+              <div class="ci-item">
+                <div class="ci-icon">📍</div>
+                <div class="ci-content">
+                  <div class="ci-label">工厂地址</div>
+                  <div class="ci-value">广东省深圳市 xxx 印刷工业园</div>
+                </div>
+              </div>
+            </div>
+            <div class="working-hours">
+              <div class="wh-title">工作时间</div>
+              <div class="wh-row">
+                <span>周一至周六</span>
+                <span>09:00 - 18:00</span>
+              </div>
+              <div class="wh-row">
+                <span>节假日</span>
+                <span>客服在线响应</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-promise">
+            <div class="promise-item">
+              <div class="pi-icon">⚡</div>
+              <span>24小时内回复报价</span>
+            </div>
+            <div class="promise-item">
+              <div class="pi-icon">🔍</div>
+              <span>免费提供印刷方案建议</span>
+            </div>
+            <div class="promise-item">
+              <div class="pi-icon">📝</div>
+              <span>提供打样服务</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 页脚 ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-star">★</span>
+            <span class="logo-text">星嘉艺印刷</span>
+          </div>
+          <p>专注儿童启蒙书籍印刷 · 18年匠心品质</p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn">微信公众号</a>
+            <a href="#" class="social-btn">微博</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="fl-col">
+            <h4>快速导航</h4>
+            <a href="#about">关于我们</a>
+            <a href="#services">产品服务</a>
+            <a href="#cases">精品案例</a>
+            <a href="#contact">联系我们</a>
+          </div>
+          <div class="fl-col">
+            <h4>印刷服务</h4>
+            <a href="#services">儿童绘本</a>
+            <a href="#services">教材练习册</a>
+            <a href="#services">精装书籍</a>
+            <a href="#services">特种工艺</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 深圳星嘉艺印刷有限公司 · 粤ICP备XXXXXXXX号</p>
+        <p>技术支持：WorkBuddy</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 表单成功提示 -->
+  <div class="form-success-toast" id="successToast">
+    <span>✅ 提交成功！我们将在24小时内联系您</span>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
