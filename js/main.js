@@ -7,21 +7,23 @@
   const navbar = document.getElementById('navbar');
   const scrollHint = document.getElementById('scrollHint');
   const SCROLL_THRESHOLD = 80;
-  const HOVER_ZONE_HEIGHT = 60;
+  const HOVER_ZONE_HEIGHT = 100;
   let isHoverZone = false;
   let lastScrollY = 0;
 
   function updateNavbar() {
     const scrollY = window.scrollY;
 
-    // 滚动超过阈值时显示
+    // 滚动超过阈值：白色毛玻璃效果
     if (scrollY > SCROLL_THRESHOLD) {
       navbar.classList.add('visible', 'scrolled');
+      navbar.classList.remove('hover-reveal');
     } else if (isHoverZone) {
-      navbar.classList.add('visible');
+      // 鼠标悬停顶部：暗色半透明效果
+      navbar.classList.add('visible', 'hover-reveal');
       navbar.classList.remove('scrolled');
     } else {
-      navbar.classList.remove('visible', 'scrolled');
+      navbar.classList.remove('visible', 'scrolled', 'hover-reveal');
     }
 
     // 隐藏滚动提示

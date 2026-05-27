@@ -55,7 +55,7 @@ img { max-width: 100%; display: block; }
   right: 0;
   z-index: 1000;
   height: var(--nav-height);
-  background: rgba(255,255,255,0.0);
+  background: rgba(0,0,0,0.0);
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
   border-bottom: 1px solid transparent;
@@ -70,12 +70,62 @@ img { max-width: 100%; display: block; }
   transform: translateY(0);
 }
 
+/* 鼠标悬停触发：暗色半透明，让文案可见 */
+.navbar.hover-reveal {
+  background: rgba(26, 26, 46, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.25);
+}
+.navbar.hover-reveal .nav-links a {
+  color: rgba(255,255,255,0.85);
+}
+.navbar.hover-reveal .nav-links a:hover {
+  color: var(--accent1);
+}
+.navbar.hover-reveal .nav-links a::after {
+  background: var(--accent1);
+}
+.navbar.hover-reveal .nav-logo {
+  color: white;
+}
+.navbar.hover-reveal .nav-cta {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 4px 16px rgba(255,107,53,0.4);
+}
+.navbar.hover-reveal .nav-toggle span {
+  background: white;
+}
+
+/* 滚动触发：白色毛玻璃 */
 .navbar.scrolled {
   background: rgba(255,255,255,0.92);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-bottom: 1px solid rgba(0,0,0,0.06);
   box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+}
+.navbar.scrolled .nav-links a {
+  color: var(--text);
+}
+.navbar.scrolled .nav-links a:hover {
+  color: var(--primary);
+}
+.navbar.scrolled .nav-links a::after {
+  background: var(--primary);
+}
+.navbar.scrolled .nav-logo {
+  color: var(--dark);
+}
+.navbar.scrolled .nav-cta {
+  background: var(--primary);
+  color: white;
+  box-shadow: none;
+}
+.navbar.scrolled .nav-toggle span {
+  background: var(--dark);
 }
 
 .nav-container {
